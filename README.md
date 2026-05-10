@@ -1,7 +1,7 @@
 # Nandini Soni — Business & Data Analyst Portfolio
 
-📧 nandinisoni681@gmail.com
-🔗 LinkedIn: linkedin.com/in/soni-nandini
+nandinisoni681@gmail.com
+Linkedin: www.linkedin.com/in/soni-nandini
 
 ## About Me
 Business Analyst with 1+ year of experience in requirements gathering,
