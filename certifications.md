@@ -2,7 +2,7 @@
 
 | # | Certification | Platform | Issued | Verify |
 |---|---|---|---|---|
-| 1 | Business Analyst — National Skill Development Certificate (NSDC) | UpGrad Campus | Nov 2024 | — |
+| 1 | Business Analyst — National Skill Development Certificate (NSDC) | UpGrad Campus | Nov 2024 | [View Certificate](./Business_Analyst_NSDC_Certificate.pdf) |
 | 2 | BA — upGraduation Ceremony Dec'24 | UpGrad Campus | Feb 2024 | [View Certificate](https://upgradcampus.certificate.givemycertificate.com/c/4a341fc0-b557-46aa-857e-411c04adfc50) |
 | 3 | Analyzing and Visualizing Data with Microsoft Power BI | Coursera | — | [View Certificate](https://coursera.org/share/12ec8b62756b53db7acde5881054dbb1) |
 | 4 | Work Smarter with Microsoft Excel | Coursera (Microsoft) | June 2023 | [View Certificate](https://coursera.org/share/f81e0de8160487f96093af5398e3a46c) |
