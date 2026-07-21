@@ -27,4 +27,4 @@ Python, SQL, and Advanced Excel. Actively expanding into Data Analyst roles.
 | Core BA Skills | Requirements Gathering, BRD/FRD Documentation, Process Flow Mapping, Gap Analysis, KPI Dashboard Development, Agile/Scrum, Stakeholder Management, UAT & Testing |
 
 ## Certifications
-See [certifications.md](./certifications.md) for full details and verification links.
+See [certifications.md](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/certifications.md) for full details and verification links.
