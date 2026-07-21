@@ -11,12 +11,12 @@ Python, SQL, and Advanced Excel. Actively expanding into Data Analyst roles.
 ## Projects
 | # | Project | Tools |
 |---|---|---|
-| 1 | [Healthcare BI Dashboard](./01_Healthcare_BI_Dashboard/) | Power BI, Excel |
-| 2 | [IPL Performance Analysis](./02_IPL_Performance_Analysis/) | Tableau |
-| 3 | [Movies Data Analysis](./03_Movies_Data_Analysis/) | Python, Pandas |
-| 4 | [RSVP SQL Case Study](./04_RSVP_SQL_Case_Study/) | SQL |
-| 5 | [Superstore Sales Analysis](./05_Superstore_Sales_Analysis/) | Advanced Excel |
-| 6 | [Bank Marketing Analysis](./06_Bank_Marketing_Analysis/) | Excel, EDA |
+| 1 | [Healthcare BI Dashboard](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/01_Healthcare_BI_Dashboard) | Power BI, Excel |
+| 2 | [IPL Performance Analysis](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Assignment_2_IPL%2BDataset.zip) | Tableau |
+| 3 | [Movies Data Analysis](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Python_Movies_dataset_Project%20(1).ipynb)| Python, Pandas |
+| 4 | [RSVP SQL Case Study](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/RSVP%20SQL%20Case%20Study%20projectL.zip) | SQL |
+| 5 | [Superstore Sales Analysis](./https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Superstore_Sales_Project_Excel.zip) | Advanced Excel |
+| 6 | [Bank Marketing Analysis]([./06_Bank_Marketing_Analysis/) ](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Excel%2C%20EDA%20%26%20Statistics%20-%20Bank%20Marketing%20Analysis%20project.zip)| Excel, EDA |
 
 ## Skills
 | Category | Skills |
