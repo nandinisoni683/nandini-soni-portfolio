@@ -16,7 +16,7 @@ Python, SQL, and Advanced Excel. Actively expanding into Data Analyst roles.
 | 3 | [Movies Data Analysis](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Python_Movies_dataset_Project%20(1).ipynb)| Python, Pandas |
 | 4 | [RSVP SQL Case Study](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/RSVP%20SQL%20Case%20Study%20projectL.zip) | SQL |
 | 5 | [Superstore Sales Analysis](./https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Superstore_Sales_Project_Excel.zip) | Advanced Excel |
-| 6 | [Bank Marketing Analysis]([./06_Bank_Marketing_Analysis/) ](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Excel%2C%20EDA%20%26%20Statistics%20-%20Bank%20Marketing%20Analysis%20project.zip)| Excel, EDA |
+| 6 | [Bank Marketing Analysis](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Excel%2C%20EDA%20%26%20Statistics%20-%20Bank%20Marketing%20Analysis%20project.zip)| Excel, EDA |
 
 ## Skills
 | Category | Skills |
