@@ -9,3 +9,4 @@
 | 5 | Getting Started with Power BI Desktop | Coursera | June 2023 | [View Certificate](https://coursera.org/share/773cb7392886e19ed63c8e06c4b5a1a1) |
 | 6 | Introduction to Microsoft Excel | Coursera | April 2023 | [View Certificate](https://www.coursera.org/account/accomplishments/verify/T64ZFL2R2M26) |
 | 7 | Advanced Excel Formulas & Functions | Udemy | May 2023 | [View Certificate](https://www.udemy.com/certificate/UC-22b1576b-96bb-4570-b7d3-6b96eca0eabb/) |
+| 8 | Business Analyst Traineeship (with Letter of Recommendation and Letter of Appreciation) | MedTourEasy | June 2023 | [View Certificate](certificates/medtoureasy-traineeship.pdf) |
