@@ -1,6 +1,6 @@
 # Nandini Soni: Business & Data Analyst Portfolio
 
-📧 nandinisoni681@gmail.com · [LinkedIn](https://www.linkedin.com/in/soni-nandini) · 🌐 [Portfolio website](https://nandinisoni683.github.io) · Indore, India
+📧 nandinisoni681@gmail.com · [LinkedIn](https://www.linkedin.com/in/soni-nandini) · 🌐 [Portfolio website](https://nandinisoni683.github.io/nandini-soni-portfolio/) · Indore, India
 
 ## About me
 I'm a Business Analyst with 1+ year of experience gathering and documenting requirements for AI-enabled applications and workflow automation, working in Agile/Scrum teams. I write BRDs, user stories and acceptance criteria, validate builds through UAT, and use SQL, Power BI, Tableau and Python to support data-driven decisions.
