@@ -12,11 +12,11 @@ Python, SQL, and Advanced Excel. Actively expanding into Data Analyst roles.
 | # | Project | Tools |
 |---|---|---|
 | 1 | [Healthcare BI Dashboard](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/01_Healthcare_BI_Dashboard) | Power BI, Excel |
-| 2 | [IPL Performance Analysis](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Assignment_2_IPL%2BDataset.zip) | Tableau |
-| 3 | [Movies Data Analysis](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Python_Movies_dataset_Project%20(1).ipynb)| Python, Pandas |
-| 4 | [RSVP SQL Case Study](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/RSVP%20SQL%20Case%20Study%20projectL.zip) | SQL |
-| 5 | [Superstore Sales Analysis](./https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Superstore_Sales_Project_Excel.zip) | Advanced Excel |
-| 6 | [Bank Marketing Analysis](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/Excel%2C%20EDA%20%26%20Statistics%20-%20Bank%20Marketing%20Analysis%20project.zip)| Excel, EDA |
+| 2 | [IPL Performance Analysis](./Tableau%20-IPL%2BDataset.zip) | Tableau |
+| 3 | [Movies Data Analysis](./Python_Movies_dataset_Project%20(1).ipynb)| Python, Pandas |
+| 4 | [RSVP SQL Case Study](./SQL%20-%20RSVP%20Case%20Study%20projectL.zip) | SQL |
+| 5 | [Superstore Sales Analysis](./Excel%20-%20Superstore_Sales_Project.zip) | Advanced Excel |
+| 6 | [Bank Marketing Analysis](./Excel%2C%20EDA%20%26%20Statistics%20-%20Bank%20Marketing%20Analysis%20project.zip)| Excel, EDA |
 
 ## Skills
 | Category | Skills |
@@ -27,4 +27,4 @@ Python, SQL, and Advanced Excel. Actively expanding into Data Analyst roles.
 | Core BA Skills | Requirements Gathering, BRD/FRD Documentation, Process Flow Mapping, Gap Analysis, KPI Dashboard Development, Agile/Scrum, Stakeholder Management, UAT & Testing |
 
 ## Certifications
-See [certifications.md](https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/certifications.md) for full details and verification links.
+See [certifications.md](./certifications.md) for full details and verification links.
