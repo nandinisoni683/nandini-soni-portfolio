@@ -5,36 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nandini Soni</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Nandini Soni: Business and Data Analyst with SQL, Power BI, Tableau, Python and AI-enabled product experience. Based in Indore, open to new roles.">
+<meta name="description" content="Nandini Soni: Business Analyst from an agentic AI startup, fluent in SQL, Power BI, Tableau and Python. Open to new opportunities.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a requirements document. Left margin carries section IDs (REQ-style), right column carries content; projects read as spec cards. */
+/* Layout: a requirements document. Left margin carries section labels, right column carries content; projects read as spec cards. Single soft light theme by choice. */
 :root {
-  --bg: #f5f7fb;
+  --bg: #f3f6fc;
+  --band: #e9eefa;
   --surface: #ffffff;
-  --ink: #121a2b;
-  --muted: #55607a;
-  --line: #dce2ee;
+  --ink: #141b2d;
+  --muted: #56617b;
+  --line: #d8dfee;
   --accent: #2447b8;
-  --accent-soft: #e6ecfb;
+  --accent-ink: #ffffff;
+  --accent-soft: #e3e9fb;
   --mark: #e8833a;
+  --live: #1f9d63;
   --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0d1220; --surface: #151c2e; --ink: #e7ecf7; --muted: #9aa6c2;
-    --line: #26304a; --accent: #8aa6ff; --accent-soft: #1c2645; --mark: #f5a962;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0d1220; --surface: #151c2e; --ink: #e7ecf7; --muted: #9aa6c2;
-  --line: #26304a; --accent: #8aa6ff; --accent-soft: #1c2645; --mark: #f5a962;
-  color-scheme: dark;
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 body {
@@ -42,70 +34,80 @@ body {
   font-family: var(--body); font-size: 1.0625rem; line-height: 1.6;
 }
 a { color: var(--accent); text-underline-offset: 3px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; border-radius: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--mark); outline-offset: 3px; border-radius: 6px; }
 .wrap {
   max-width: 68rem; margin: 0 auto;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
-.mono { font-family: var(--mono); font-size: 0.8125rem; letter-spacing: 0.02em; }
+
+/* Buttons: every link that goes somewhere is a visible, bold call to action */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.15rem;
+  border: 2px solid var(--accent); border-radius: 8px; background: var(--surface);
+  color: var(--accent); text-decoration: none; font: 700 0.975rem/1.2 var(--body); cursor: pointer;
+}
+.btn:hover { background: var(--accent-soft); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { filter: brightness(1.12); background: var(--accent); }
+.btn svg { width: 1.15rem; height: 1.15rem; fill: currentColor; flex: none; }
+.btn .arrow { font-family: var(--mono); font-weight: 500; }
+.btn.sm { padding: 0.5rem 0.9rem; font-size: 0.9rem; }
 
 /* Header */
-header { padding-block: 3.5rem 2.5rem; border-bottom: 1px solid var(--line); }
+header { padding-block: 3.5rem 3rem; background: var(--band); border-bottom: 1px solid var(--line); }
 .status {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  font-family: var(--mono); font-size: 0.8125rem; color: var(--muted);
+  display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.35rem 0.8rem;
+  border-radius: 999px; background: var(--surface); border: 1px solid var(--line);
+  font-weight: 600; font-size: 0.9rem; color: var(--ink);
 }
-.status::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--mark); }
-.name-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; margin: 1rem 0 0.75rem; }
+.status::before { content: ""; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--live); box-shadow: 0 0 0 3px #1f9d6333; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 2.5rem; align-items: end; }
+.name-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem 1.25rem; margin: 1.1rem 0 0.9rem; }
 h1 {
   font-family: var(--display); font-weight: 700; font-size: clamp(2.5rem, 7vw, 4.5rem);
   line-height: 1; letter-spacing: -0.02em; margin: 0; text-wrap: balance;
 }
-.social { display: flex; gap: 0.5rem; }
-.social a {
-  display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem;
-  border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
-}
-.social a:hover { border-color: var(--accent); color: var(--accent); }
-.social svg { width: 1.25rem; height: 1.25rem; fill: currentColor; }
-.stats { list-style: none; margin: 0.25rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; }
-.stats strong { display: block; font-family: var(--display); font-weight: 700; font-size: 2rem; line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums; }
-.stats span { font-family: var(--body); font-size: 0.875rem; color: var(--muted); line-height: 1.35; display: block; }
-.sub { font-family: var(--display); font-size: 1.05rem; font-weight: 700; color: var(--muted); margin: 2.5rem 0 1.25rem; text-transform: uppercase; letter-spacing: 0.06em; }
-.badge { font-family: var(--mono); font-size: 0.6875rem; padding: 0.15rem 0.5rem; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-left: 0.4rem; vertical-align: 0.15em; white-space: nowrap; }
-.role { font-family: var(--display); font-weight: 500; font-size: clamp(1.15rem, 2.6vw, 1.5rem); color: var(--muted); margin: 0; text-wrap: balance; }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2.5rem; align-items: end; }
-.lede { max-width: 38rem; margin: 1.5rem 0 0; }
+.social { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.role { font-family: var(--display); font-weight: 500; font-size: clamp(1.2rem, 2.7vw, 1.55rem); color: var(--ink); margin: 0; text-wrap: balance; }
+.role em { font-style: normal; color: var(--accent); }
+.lede { max-width: 38rem; margin: 1.25rem 0 0; color: var(--muted); }
 .links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
-.btn {
-  display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1rem;
-  border: 1px solid var(--line); border-radius: 6px; background: var(--surface);
-  color: var(--ink); text-decoration: none; font: 600 0.9375rem var(--body); cursor: pointer;
-}
-.btn:hover { border-color: var(--accent); color: var(--accent); }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-.btn.primary:hover { filter: brightness(1.08); color: var(--bg); }
-.email-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 1rem; }
-.email-row code { font-family: var(--mono); font-size: 0.875rem; user-select: all; overflow-wrap: anywhere; }
-.copied { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); }
+.email-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 1.1rem; }
+.email-row code { font-family: var(--mono); font-size: 0.9rem; user-select: all; overflow-wrap: anywhere; }
+.copied { font-family: var(--mono); font-size: 0.75rem; color: var(--live); }
 
-/* Acceptance-criteria card in hero */
-.gwt {
-  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
-  padding: 1.25rem 1.25rem 1.1rem; font-family: var(--mono); font-size: 0.8125rem; line-height: 1.7;
-  min-width: 0;
+.glance {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 1.35rem; min-width: 0;
 }
-.gwt .lbl { color: var(--muted); display: block; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.6875rem; }
-.gwt b { color: var(--accent); font-weight: 500; }
+.glance .lbl { color: var(--muted); display: block; margin-bottom: 0.75rem; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.6875rem; }
+.stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; }
+.stats strong { display: block; font-family: var(--display); font-weight: 700; font-size: 2rem; line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.stats span { font-size: 0.875rem; color: var(--muted); line-height: 1.35; display: block; }
 
 /* Sections */
 section { padding-block: 3.5rem; border-bottom: 1px solid var(--line); }
 .sec { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 2rem; }
-.sec-id { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; padding-top: 0.5rem; }
+.sec-id { font-family: var(--mono); font-size: 0.75rem; color: var(--mark); font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; padding-top: 0.6rem; }
 h2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.6rem, 3.5vw, 2.1rem); line-height: 1.15; margin: 0 0 1.5rem; text-wrap: balance; }
 h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-height: 1.25; margin: 0; text-wrap: balance; }
 p { margin: 0 0 1rem; }
+.intro { color: var(--muted); max-width: 40rem; margin-top: -0.75rem; }
+
+/* Experience */
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 2rem; }
+.job { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 1.5rem; }
+.when { font-family: var(--mono); font-size: 0.8125rem; color: var(--muted); padding-top: 0.2rem; font-variant-numeric: tabular-nums; }
+.org { color: var(--muted); font-size: 0.95rem; margin: 0.2rem 0 0.6rem; }
+.job ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
+.job .btn { margin-top: 0.9rem; }
+.featured {
+  background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+  border-radius: 10px; padding: 1.5rem;
+}
+.badge { font-family: var(--mono); font-size: 0.6875rem; font-weight: 500; padding: 0.2rem 0.55rem; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-left: 0.4rem; vertical-align: 0.2em; white-space: nowrap; }
+.h2-gap { margin-top: 3rem; }
 
 /* Strengths */
 .pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
@@ -115,45 +117,39 @@ p { margin: 0 0 1rem; }
 /* Projects as spec cards */
 .specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
 .spec {
-  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
   padding: 1.4rem; display: flex; flex-direction: column; gap: 0.9rem; min-width: 0;
 }
 .spec-top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
-.spec-tag { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
+.spec-tag { font-family: var(--mono); font-size: 0.75rem; color: var(--mark); white-space: nowrap; }
 .spec dl { margin: 0; display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0.35rem 0.75rem; font-size: 0.95rem; }
 .spec dt { font-family: var(--mono); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); padding-top: 0.25rem; }
 .spec dd { margin: 0; }
 .tools { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .chip { font-family: var(--mono); font-size: 0.75rem; padding: 0.2rem 0.55rem; border-radius: 4px; background: var(--accent-soft); color: var(--accent); }
-.spec .more { margin-top: auto; font-weight: 600; font-size: 0.95rem; }
+.spec .btn { margin-top: auto; align-self: flex-start; }
 
-/* Experience timeline */
-.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 2rem; }
-.job { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 1.5rem; }
-.when { font-family: var(--mono); font-size: 0.8125rem; color: var(--muted); padding-top: 0.2rem; font-variant-numeric: tabular-nums; }
-.org { color: var(--muted); font-size: 0.95rem; margin: 0.15rem 0 0.6rem; }
-.job ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
-
-/* Skills matrix */
+/* Skills */
 .skills { display: grid; gap: 1.25rem; }
 .skill-row { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 1rem; padding-bottom: 1.25rem; border-bottom: 1px dashed var(--line); }
 .skill-row:last-child { border-bottom: 0; padding-bottom: 0; }
 .skill-row h3 { font-size: 1rem; padding-top: 0.15rem; }
 
-/* Education + certs */
+/* Credentials */
 .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; }
-.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
-.list li { display: grid; gap: 0.1rem; }
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.list li { display: grid; gap: 0.15rem; }
 .list .meta { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); }
+.cert { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1rem; padding: 0.9rem 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.cert > div { display: grid; gap: 0.1rem; min-width: 0; }
 
-footer { padding-block: 2.5rem 3rem; color: var(--muted); font-size: 0.9rem; }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+footer { padding-block: 2.5rem 3rem; color: var(--muted); font-size: 0.95rem; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
 
 @media (max-width: 860px) {
   .hero-grid, .two { grid-template-columns: minmax(0, 1fr); }
   .sec { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
-  .pillars { grid-template-columns: minmax(0, 1fr); }
-  .specs { grid-template-columns: minmax(0, 1fr); }
+  .pillars, .specs { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
   .job, .skill-row { grid-template-columns: minmax(0, 1fr); gap: 0.4rem; }
@@ -161,7 +157,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .spec dt { padding-top: 0.5rem; }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .btn { transition: border-color .15s, color .15s, filter .15s; }
+  .btn { transition: background-color .15s, filter .15s; }
 }
 </style>
 </head>
@@ -170,57 +166,127 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 <header>
   <div class="wrap hero-grid">
     <div>
-      <span class="status">Open to Business Analyst and Data Analyst roles · Indore or remote</span>
+      <span class="status">Open to new opportunities · Available to join immediately</span>
       <div class="name-row">
         <h1>Nandini Soni</h1>
         <div class="social">
-          <a href="https://www.linkedin.com/in/soni-nandini" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
-          <a href="https://github.com/nandinisoni683" target="_blank" rel="noopener" aria-label="GitHub profile" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg></a>
+          <a class="btn primary" href="https://www.linkedin.com/in/soni-nandini" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+          <a class="btn" href="https://github.com/nandinisoni683" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>GitHub</a>
         </div>
       </div>
-      <p class="role">Business &amp; Data Analyst · SQL, Power BI, Tableau, Python and AI-enabled products</p>
-      <p class="lede">I turn business questions into data and data into decisions. I clean and analyse datasets, build KPI dashboards and write SQL and Python analyses. As a Business Analyst I also write the requirements, user stories and acceptance criteria that get the right thing built, then test it through UAT.</p>
+      <p class="role">Business Analyst who shipped <em>agentic AI products</em> and speaks fluent data</p>
+      <p class="lede">I spent the last year at an agentic AI startup defining how AI agents should behave and making sure they did. Before that, I learned to let data make the argument: SQL, Python, Tableau and Power BI.</p>
       <div class="links">
-        <a class="btn primary" href="#projects">See data projects</a>
-        <a class="btn" href="#internships">Internships</a>
-        <a class="btn" href="#credentials">Certificates</a>
+        <a class="btn primary" href="#experience">See my experience <span class="arrow">→</span></a>
+        <a class="btn" href="#projects">Data projects <span class="arrow">→</span></a>
+        <a class="btn" href="#credentials">Certificates <span class="arrow">→</span></a>
       </div>
       <div class="email-row">
         <code id="email">nandinisoni681@gmail.com</code>
-        <button class="btn" id="copy-email" type="button">Copy email</button>
+        <button class="btn sm" id="copy-email" type="button">Copy email</button>
         <span class="copied" id="copied" hidden>Copied</span>
       </div>
     </div>
-    <div class="gwt" aria-label="Portfolio at a glance">
+    <div class="glance" aria-label="Portfolio at a glance">
       <span class="lbl">At a glance</span>
       <ul class="stats">
+        <li><strong>1+ yr</strong><span>Business Analyst at an agentic AI startup</span></li>
         <li><strong>7</strong><span>data and analysis projects</span></li>
-        <li><strong>3</strong><span>internships and traineeships in data and BA</span></li>
-        <li><strong>45K+</strong><span>records cleaned in the bank marketing EDA</span></li>
-        <li><strong>24</strong><span>business questions answered in SQL</span></li>
+        <li><strong>3</strong><span>internships and traineeships</span></li>
+        <li><strong>45K+</strong><span>records cleaned and analysed in one EDA</span></li>
       </ul>
     </div>
   </div>
 </header>
 
 <main>
+  <section id="experience">
+    <div class="wrap sec">
+      <div class="sec-id">Experience</div>
+      <div>
+        <h2>Work experience</h2>
+        <ol class="timeline">
+          <li class="job">
+            <div class="when">Aug 2025 – Oct 2026</div>
+            <div class="featured">
+              <h3>Associate Business Analyst <span class="badge">Agentic AI startup</span></h3>
+              <p class="org">Ratovate Technologies · Indore</p>
+              <ul>
+                <li>Defined how AI agents and knowledge bases should behave, written as user stories and acceptance criteria that developers and AI teams could build and test against.</li>
+                <li>Mapped user journeys and workflows, and kept business and tech aligned through Agile sprints.</li>
+                <li>Validated AI builds through test cases and UAT, and used project data to report progress to leadership.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="when">Sep 2022 – Feb 2023</div>
+            <div>
+              <h3>Business Development Executive</h3>
+              <p class="org">VIBS Infosol · Indore</p>
+              <ul>
+                <li>Kept a clean sales pipeline for 30+ prospects and reported lead conversion trends to senior management in Excel.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <h2 id="internships" class="h2-gap">Internships and training</h2>
+        <ol class="timeline">
+          <li class="job">
+            <div class="when">Apr 2025 – Jun 2025</div>
+            <div>
+              <h3>Project Management Intern</h3>
+              <p class="org">Webvillee Technologies (Motionvillee) · Indore</p>
+              <ul>
+                <li>Built live KPI dashboards in Google Sheets and Excel tracking 10+ deliverables.</li>
+                <li>Analysed delivery trends across 8+ concurrent projects to sharpen prioritisation.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="when">Sep 2024 – Oct 2024</div>
+            <div>
+              <h3>Data Analyst Intern <span class="badge">mentor-led</span></h3>
+              <p class="org">The Thickshake Factory &amp; Mentormind · Remote</p>
+              <ul>
+                <li>Built Tableau dashboards on restaurant sales and ran a market basket analysis to design a combo meal.</li>
+                <li>Delivered a report of recommendations, assumptions and limitations.</li>
+              </ul>
+              <a class="btn sm" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/03-restaurant-best-selling-menu" target="_blank" rel="noopener">View internship work <span class="arrow">→</span></a>
+            </div>
+          </li>
+          <li class="job">
+            <div class="when">Jun 2023</div>
+            <div>
+              <h3>Business Analyst Trainee</h3>
+              <p class="org">MedTourEasy · Remote</p>
+              <ul>
+                <li>Built a Tableau visualisation project on healthcare data and earned a Letter of Recommendation.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="wrap sec">
       <div class="sec-id">What I do</div>
       <div>
-        <h2>Data analysis and business analysis, in one person</h2>
+        <h2>From business question to data-backed decision</h2>
         <div class="pillars">
           <div class="pillar">
-            <h3>Data analysis</h3>
-            <p>Data cleaning, exploratory and statistical analysis, segmentation and market basket analysis in SQL, Python (Pandas) and Advanced Excel.</p>
+            <h3>Analyse the data</h3>
+            <p>Cleaning, exploratory and statistical analysis, segmentation and basket analysis in SQL, Python and Excel.</p>
           </div>
           <div class="pillar">
-            <h3>Dashboards and reporting</h3>
-            <p>KPI dashboards and visual stories in Power BI, Tableau, Excel and Google Sheets that turn trends into clear recommendations.</p>
+            <h3>Make it visible</h3>
+            <p>KPI dashboards and visual stories in Power BI, Tableau and Excel that lead to a clear recommendation.</p>
           </div>
           <div class="pillar">
-            <h3>Requirements and AI products</h3>
-            <p>BRDs, user stories, acceptance criteria and UAT for AI-enabled applications, plus working knowledge of Dify, n8n, Voiceflow and the OpenAI and Gemini APIs.</p>
+            <h3>Get it built right</h3>
+            <p>Requirements, acceptance criteria and UAT for AI-enabled products, so what ships matches what the business needs.</p>
           </div>
         </div>
       </div>
@@ -232,34 +298,34 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <div class="sec-id">Projects</div>
       <div>
         <h2>Data and analysis projects</h2>
-        <p style="color: var(--muted); max-width: 40rem;">Each project opens a public, read-only page on GitHub with the problem, approach, findings and the original files: SQL scripts, notebooks, workbooks and reports.</p>
+        <p class="intro">Each project opens a public, read-only page with the problem, approach, findings and original files.</p>
         <div class="specs">
           <article class="spec">
             <div class="spec-top"><h3>SaaS Sales Pipeline Conversion</h3><span class="spec-tag">Case study</span></div>
             <dl>
               <dt>Problem</dt><dd>A SaaS startup&#8217;s pipeline conversion fell from 35% to 25%.</dd>
-              <dt>Approach</dt><dd>Framed the problem with 5W1H and SPIN, built an issue tree on the 5C framework with 18 ranked hypotheses, then analysed opportunity data to show which leads convert best.</dd>
+              <dt>Approach</dt><dd>Built an issue tree on the 5C framework with 18 ranked hypotheses, then analysed opportunity data to find which leads convert best.</dd>
             </dl>
             <div class="tools"><span class="chip">Issue tree</span><span class="chip">5C framework</span><span class="chip">Excel</span></div>
-            <a class="more" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/01-saas-sales-pipeline-conversion" target="_blank" rel="noopener">View project</a>
+            <a class="btn primary sm" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/01-saas-sales-pipeline-conversion" target="_blank" rel="noopener">View project <span class="arrow">→</span></a>
           </article>
           <article class="spec">
             <div class="spec-top"><h3>Bank Marketing Analysis</h3><span class="spec-tag">Excel EDA</span></div>
             <dl>
               <dt>Problem</dt><dd>Find which bank customers to target for term deposits, and why they convert.</dd>
-              <dt>Approach</dt><dd>Cleaned 45,000+ records, then ran univariate, segmented and bivariate analysis on age, job, balance, loans, contact channel and timing.</dd>
+              <dt>Approach</dt><dd>Cleaned 45,000+ records, then ran univariate, segmented and bivariate analysis on age, job, balance, loans and contact channel.</dd>
             </dl>
             <div class="tools"><span class="chip">Advanced Excel</span><span class="chip">Data cleaning</span><span class="chip">EDA</span></div>
-            <a class="more" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/02-bank-marketing-eda" target="_blank" rel="noopener">View project</a>
+            <a class="btn primary sm" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/02-bank-marketing-eda" target="_blank" rel="noopener">View project <span class="arrow">→</span></a>
           </article>
           <article class="spec">
             <div class="spec-top"><h3>Restaurant Best-Selling Menu</h3><span class="spec-tag">Tableau</span></div>
             <dl>
-              <dt>Problem</dt><dd>Choose items for a best-selling menu and combo meals at The Thickshake Factory.</dd>
-              <dt>Approach</dt><dd>Built Tableau views of top products, sales trend and order type, plus a market basket analysis. Found Pizza Dosa and American Chopsuey as the top combo.</dd>
+              <dt>Problem</dt><dd>Choose items for a best-selling menu and combo meals.</dd>
+              <dt>Approach</dt><dd>Tableau views of top products, sales trend and order type, plus a market basket analysis that found the top combo.</dd>
             </dl>
             <div class="tools"><span class="chip">Tableau</span><span class="chip">Basket analysis</span><span class="chip">Report</span></div>
-            <a class="more" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/03-restaurant-best-selling-menu" target="_blank" rel="noopener">View project</a>
+            <a class="btn primary sm" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/03-restaurant-best-selling-menu" target="_blank" rel="noopener">View project <span class="arrow">→</span></a>
           </article>
           <article class="spec">
             <div class="spec-top"><h3>RSVP Movies Case Study</h3><span class="spec-tag">SQL</span></div>
@@ -268,16 +334,16 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
               <dt>Approach</dt><dd>Answered 24 business questions across 6 IMDb tables using joins, CTEs, window functions and CASE logic.</dd>
             </dl>
             <div class="tools"><span class="chip">MySQL</span><span class="chip">CTEs</span><span class="chip">Window functions</span></div>
-            <a class="more" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/04-sql-rsvp-imdb-movies" target="_blank" rel="noopener">View project</a>
+            <a class="btn primary sm" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/04-sql-rsvp-imdb-movies" target="_blank" rel="noopener">View project <span class="arrow">→</span></a>
           </article>
           <article class="spec">
             <div class="spec-top"><h3>Movies Data Analysis</h3><span class="spec-tag">Python</span></div>
             <dl>
               <dt>Problem</dt><dd>Find what separates successful movies from the rest.</dd>
-              <dt>Approach</dt><dd>Cleaned an IMDb dataset with Pandas, then ranked profit, built an IMDb Top 250 and compared directors, genres and actors.</dd>
+              <dt>Approach</dt><dd>Cleaned an IMDb dataset with Pandas, ranked profit, built an IMDb Top 250 and compared directors, genres and actors.</dd>
             </dl>
             <div class="tools"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">EDA</span></div>
-            <a class="more" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/05-python-movies-eda" target="_blank" rel="noopener">View notebook</a>
+            <a class="btn primary sm" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/05-python-movies-eda" target="_blank" rel="noopener">View notebook <span class="arrow">→</span></a>
           </article>
           <article class="spec">
             <div class="spec-top"><h3>IPL Performance Analysis</h3><span class="spec-tag">Tableau</span></div>
@@ -286,93 +352,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
               <dt>Approach</dt><dd>Cleaned the match data and built interactive Tableau views by player, team and season.</dd>
             </dl>
             <div class="tools"><span class="chip">Tableau</span><span class="chip">Data cleaning</span></div>
-            <a class="more" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/06-ipl-tableau-dashboard" target="_blank" rel="noopener">View project</a>
+            <a class="btn primary sm" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/06-ipl-tableau-dashboard" target="_blank" rel="noopener">View project <span class="arrow">→</span></a>
           </article>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap sec">
-      <div class="sec-id">Experience</div>
-      <div>
-        <h2>Work experience</h2>
-        <ol class="timeline">
-          <li class="job">
-            <div class="when">Aug 2025 – Oct 2026</div>
-            <div>
-              <h3>Associate Business Analyst</h3>
-              <p class="org">Ratovate Technologies · Indore</p>
-              <ul>
-                <li>Gathered and documented requirements for AI-enabled applications: BRDs, user stories, use cases, acceptance criteria and process flows.</li>
-                <li>Specified AI agent interactions and knowledge-base behaviour, and prepared wireframes to align business and technical teams.</li>
-                <li>Wrote test cases, ran UAT and tracked defects to resolution with developers and AI teams across concurrent sprints.</li>
-                <li>Analysed operational and project data to deliver reports for team leads and senior leadership.</li>
-              </ul>
-            </div>
-          </li>
-          <li class="job">
-            <div class="when">Sep 2022 – Feb 2023</div>
-            <div>
-              <h3>Business Development Executive</h3>
-              <p class="org">VIBS Infosol · Indore</p>
-              <ul>
-                <li>Maintained a sales pipeline tracker for 30+ prospects and built Excel reports on lead conversion for senior management.</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
-
-        <h2 id="internships" style="margin-top: 3rem;">Internships and training</h2>
-        <ol class="timeline">
-          <li class="job">
-            <div class="when">Apr 2025 – Jun 2025</div>
-            <div>
-              <h3>Project Management Intern</h3>
-              <p class="org">Webvillee Technologies (Motionvillee) · Indore</p>
-              <ul>
-                <li>Built live Google Sheets and Excel dashboards tracking KPIs, timelines and requirement status across 10+ deliverables.</li>
-                <li>Ran ad-hoc analysis of task completion trends and resource utilisation across 8+ concurrent projects, which improved delivery visibility and prioritisation.</li>
-                <li>Led requirement sessions and daily Agile stand-ups, and standardised performance reporting to management.</li>
-              </ul>
-            </div>
-          </li>
-          <li class="job">
-            <div class="when">Sep 2024 – Oct 2024</div>
-            <div>
-              <h3>Data Analyst Intern <span class="badge">mentor-led</span></h3>
-              <p class="org">The Thickshake Factory &amp; Mentormind · Remote</p>
-              <ul>
-                <li>Cleaned and analysed restaurant sales data, then built Tableau dashboards of top products, daily sales trend and dine-in vs. takeaway orders.</li>
-                <li>Ran a market basket analysis that found Pizza Dosa and American Chopsuey as the most-paired items, and recommended them as a combo meal.</li>
-                <li>Wrote a report with recommendations, assumptions and limitations, plus a CRISP-DM case study on restaurant analytics.</li>
-                <li><a href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/03-restaurant-best-selling-menu" target="_blank" rel="noopener">View the internship work</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="job">
-            <div class="when">Jun 2023</div>
-            <div>
-              <h3>Business Analyst Trainee</h3>
-              <p class="org">MedTourEasy · Remote</p>
-              <ul>
-                <li>Built the project "Data Visualization using Tableau" on healthcare data and presented key insights through structured visualisations.</li>
-                <li>Received a Letter of Recommendation and a Letter of Appreciation from the Training Head.</li>
-              </ul>
-            </div>
-          </li>
-          <li class="job">
-            <div class="when">2024 – Jan 2025</div>
-            <div>
-              <h3>Business Analyst Program <span class="badge">NSDC certified</span></h3>
-              <p class="org">upGrad · Online</p>
-              <ul>
-                <li>Completed hands-on projects in SQL, Python, Tableau, Advanced Excel, EDA and business problem solving. Five of them are shown in the projects above.</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
       </div>
     </div>
   </section>
@@ -383,9 +365,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <div>
         <h2>Toolkit</h2>
         <div class="skills">
-          <div class="skill-row"><h3>Business analysis</h3><div class="tools"><span class="chip">Requirements elicitation</span><span class="chip">BRD / FRD</span><span class="chip">User stories</span><span class="chip">Acceptance criteria</span><span class="chip">Process mapping</span><span class="chip">Gap analysis</span><span class="chip">Wireframing</span><span class="chip">UAT</span><span class="chip">Agile / Scrum</span></div></div>
-          <div class="skill-row"><h3>AI and automation</h3><div class="tools"><span class="chip">Agentic AI</span><span class="chip">Prompt engineering</span><span class="chip">RAG / knowledge bases</span><span class="chip">Dify</span><span class="chip">n8n</span><span class="chip">Voiceflow</span><span class="chip">OpenAI API</span><span class="chip">Gemini API</span></div></div>
           <div class="skill-row"><h3>Data and BI</h3><div class="tools"><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Python / Pandas</span><span class="chip">Advanced Excel</span><span class="chip">EDA</span><span class="chip">KPI dashboards</span></div></div>
+          <div class="skill-row"><h3>Business analysis</h3><div class="tools"><span class="chip">Requirements</span><span class="chip">BRD / FRD</span><span class="chip">User stories</span><span class="chip">Acceptance criteria</span><span class="chip">Process mapping</span><span class="chip">UAT</span><span class="chip">Agile / Scrum</span></div></div>
+          <div class="skill-row"><h3>AI and automation</h3><div class="tools"><span class="chip">Agentic AI</span><span class="chip">Prompt engineering</span><span class="chip">RAG / knowledge bases</span><span class="chip">Dify</span><span class="chip">n8n</span><span class="chip">Voiceflow</span><span class="chip">OpenAI API</span><span class="chip">Gemini API</span></div></div>
           <div class="skill-row"><h3>Tools</h3><div class="tools"><span class="chip">Jira</span><span class="chip">ClickUp</span><span class="chip">Basecamp</span><span class="chip">Google Workspace</span><span class="chip">MS Office</span></div></div>
         </div>
       </div>
@@ -397,21 +379,21 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <div class="sec-id">Credentials</div>
       <div class="two">
         <div>
+          <h2>Certifications</h2>
+          <ul class="list">
+            <li class="cert"><div><strong>Business Analyst, NSDC</strong><span class="meta">upGrad · Nov 2024</span></div><a class="btn sm" href="https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/certificates/upgrad-business-analyst-nsdc.pdf" target="_blank" rel="noopener">View</a></li>
+            <li class="cert"><div><strong>Analyzing and Visualizing Data with Power BI</strong><span class="meta">Coursera</span></div><a class="btn sm" href="https://coursera.org/share/12ec8b62756b53db7acde5881054dbb1" target="_blank" rel="noopener">View</a></li>
+            <li class="cert"><div><strong>Getting Started with Power BI Desktop</strong><span class="meta">Coursera · Jun 2023</span></div><a class="btn sm" href="https://coursera.org/share/773cb7392886e19ed63c8e06c4b5a1a1" target="_blank" rel="noopener">View</a></li>
+            <li class="cert"><div><strong>Work Smarter with Microsoft Excel</strong><span class="meta">Coursera (Microsoft) · Jun 2023</span></div><a class="btn sm" href="https://coursera.org/share/f81e0de8160487f96093af5398e3a46c" target="_blank" rel="noopener">View</a></li>
+            <li class="cert"><div><strong>Advanced Excel Formulas &amp; Functions</strong><span class="meta">Udemy · May 2023</span></div><a class="btn sm" href="https://www.udemy.com/certificate/UC-22b1576b-96bb-4570-b7d3-6b96eca0eabb/" target="_blank" rel="noopener">View</a></li>
+          </ul>
+        </div>
+        <div>
           <h2>Education</h2>
           <ul class="list">
             <li><strong>Business Analyst Program (NSDC certified)</strong><span class="meta">upGrad · 2024 – Jan 2025</span></li>
             <li><strong>MBA, Marketing &amp; HRM</strong><span class="meta">Medi-Caps University, Indore · 2020 – 2022</span></li>
             <li><strong>B.Sc. Industrial Chemistry</strong><span class="meta">Maharaja Chhatrasal Bundelkhand University · 2017 – 2020</span></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Certifications</h2>
-          <ul class="list">
-            <li><a href="https://github.com/nandinisoni683/nandini-soni-portfolio/blob/main/certificates/upgrad-business-analyst-nsdc.pdf" target="_blank" rel="noopener"><strong>Business Analyst, NSDC</strong></a><span class="meta">upGrad · Nov 2024</span></li>
-            <li><a href="https://coursera.org/share/12ec8b62756b53db7acde5881054dbb1" target="_blank" rel="noopener"><strong>Analyzing and Visualizing Data with Power BI</strong></a><span class="meta">Coursera</span></li>
-            <li><a href="https://coursera.org/share/773cb7392886e19ed63c8e06c4b5a1a1" target="_blank" rel="noopener"><strong>Getting Started with Power BI Desktop</strong></a><span class="meta">Coursera · Jun 2023</span></li>
-            <li><a href="https://coursera.org/share/f81e0de8160487f96093af5398e3a46c" target="_blank" rel="noopener"><strong>Work Smarter with Microsoft Excel</strong></a><span class="meta">Coursera (Microsoft) · Jun 2023</span></li>
-            <li><a href="https://www.udemy.com/certificate/UC-22b1576b-96bb-4570-b7d3-6b96eca0eabb/" target="_blank" rel="noopener"><strong>Advanced Excel Formulas &amp; Functions</strong></a><span class="meta">Udemy · May 2023</span></li>
           </ul>
         </div>
       </div>
@@ -421,8 +403,11 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 <footer>
   <div class="wrap">
-    <span>Nandini Soni · Indore, Madhya Pradesh</span>
-    <span><a href="https://www.linkedin.com/in/soni-nandini" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/nandinisoni683" target="_blank" rel="noopener">GitHub</a></span>
+    <span>Nandini Soni · Business Analyst</span>
+    <span class="social">
+      <a class="btn primary sm" href="https://www.linkedin.com/in/soni-nandini" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn sm" href="https://github.com/nandinisoni683" target="_blank" rel="noopener">GitHub</a>
+    </span>
   </div>
 </footer>
 
