@@ -1,6 +1,7 @@
 # RSVP Movies: IMDb SQL Case Study
 
-**Type:** SQL analysis · **Tools:** MySQL · **Program:** upGrad Business Analyst
+**Type:** SQL analysis · **Tools:** MySQL  
+**Done at:** upGrad Business Analyst Program (NSDC) · Jul 2024
 
 ## Problem
 RSVP Movies, an Indian production house, plans to make a film for a global audience. Using an IMDb database (tables: movie, genre, ratings, names, director_mapping, role_mapping), recommend the genre, directors, actors and production partners for the next project.
@@ -21,7 +22,10 @@ SQL used: `JOIN`s across 6 tables, `GROUP BY`/`HAVING`, CTEs, window functions (
 - **Taapsee Pannu** tops Hindi-film actresses with an average rating of 7.74.
 
 ## Files
+Original files in this folder:
+
 | File | What it is |
 |---|---|
-| [`rsvp_imdb_analysis.sql`](rsvp_imdb_analysis.sql) | All queries with comments and findings |
+| [`rsvp_imdb_analysis.sql`](rsvp_imdb_analysis.sql) | All 24 queries with comments and findings |
 | [`executive_summary.pdf`](executive_summary.pdf) | Executive summary and recommendations |
+| [`imdb-data-and-erd.xlsx`](imdb-data-and-erd.xlsx) | IMDb tables and the entity-relationship diagram (ERD) |

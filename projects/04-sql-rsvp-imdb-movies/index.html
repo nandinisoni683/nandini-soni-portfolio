@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSVP Movies: IMDb SQL Case Study · Nandini Soni</title>
+<meta name="description" content="RSVP Movies, an Indian production house, plans a film for a global audience. Which genre, director and cast give it the best chance?">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="back" href="../../index.html">← Nandini Soni · Portfolio</a>
+  <div class="profiles"><a class="btn primary" href="https://www.linkedin.com/in/soni-nandini" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/nandinisoni683" target="_blank" rel="noopener">GitHub</a></div>
+</div></div>
+<header><div class="wrap">
+  <p class="eyebrow">Project</p>
+  <h1>RSVP Movies: IMDb SQL Case Study</h1>
+  <p class="meta"><span><b>Done at:</b> upGrad Business Analyst Program (NSDC) · Jul 2024</span><span><b>Tools:</b> MySQL</span></p>
+  <dl class="summary">
+    <dt>Problem</dt><dd>RSVP Movies, an Indian production house, plans a film for a global audience. Which genre, director and cast give it the best chance?</dd>
+    <dt>Result</dt><dd><b>Drama</b> is the most-made genre and Thriller is top 3. <b>James Mangold</b> stands out as a director, <b>Marvel Studios</b> gets the most votes, and Taapsee Pannu is the top-rated Hindi-film actress.</dd>
+  </dl>
+  <div class="jump"><a class="btn" href="#steps">Steps</a><a class="btn" href="#model">Data model</a><a class="btn" href="#queries">Queries</a><a class="btn" href="#summary">Summary</a></div>
+</div></header>
+<main>
+<section id="steps"><div class="wrap"><p class="sec-id">How I did it</p><h2>Step by step</h2><ol class="steps"><li><span><b>Explored the data.</b>Counted rows in each table and found which columns have missing values.</span></li><li><span><b>Looked at release trends.</b>Counted films per year and month, and per country.</span></li><li><span><b>Analysed genres and ratings.</b>Found the biggest genres, the top-rated films and the studios with the most hits.</span></li><li><span><b>Analysed people.</b>Ranked directors, actors and actresses by the ratings of their films.</span></li><li><span><b>Wrote recommendations</b>for RSVP Movies on genre, director, cast and production partner.</span></li></ol></div></section>
+<section id="model"><div class="wrap"><p class="sec-id">Data model</p><h2>The six tables</h2><p class="lead">Every film sits in the movie table. The other tables link to it through movie_id, and people link through name_id.</p><div class="tables"><div><h3>movie</h3><p>One row per film: title, year, length, country and income. Every other table links to this one.</p><span class="cols">id, title, year, duration, country, production_company</span></div><div><h3>ratings</h3><p>Average rating, total votes and median rating for each film.</p><span class="cols">movie_id, avg_rating, total_votes, median_rating</span></div><div><h3>genre</h3><p>The genres of each film. A film can have several.</p><span class="cols">movie_id, genre</span></div><div><h3>names</h3><p>People: actors, actresses and directors.</p><span class="cols">id, name, date_of_birth</span></div><div><h3>role_mapping</h3><p>Who acted in which film, and as actor or actress.</p><span class="cols">movie_id, name_id, category</span></div><div><h3>director_mapping</h3><p>Who directed which film.</p><span class="cols">movie_id, name_id</span></div></div></div></section>
+<section id="queries"><div class="wrap"><p class="sec-id">SQL</p><h2>Three example queries</h2><p class="lead">A short sample of the 24 business questions I answered.</p><div class="snips"><div class="snip"><h3>Which genre is made most?</h3><p>Counts films per genre and keeps the top one. Answer: <b>Drama</b>.</p><div class="code"><div class="highlight"><pre><span></span><span class="k">select</span><span class="w"> </span><span class="n">genre</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">movie_id</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">movie_count</span>
+<span class="k">from</span><span class="w"> </span><span class="n">genre</span>
+<span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">genre</span>
+<span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">movie_count</span><span class="w"> </span><span class="k">desc</span>
+<span class="k">limit</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div></div><div class="snip"><h3>Top 10 films by rating</h3><p>Joins films to their ratings and ranks them with a window function.</p><div class="code"><div class="highlight"><pre><span></span><span class="k">select</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">avg_rating</span><span class="p">,</span>
+<span class="w">       </span><span class="n">row_number</span><span class="p">()</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="p">(</span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">avg_rating</span><span class="w"> </span><span class="k">desc</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">movie_rank</span>
+<span class="k">from</span><span class="w"> </span><span class="n">movie</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">m</span>
+<span class="k">left</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">ratings</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">movie_id</span>
+<span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">avg_rating</span><span class="w"> </span><span class="k">desc</span>
+<span class="k">limit</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</pre></div>
+</div></div><div class="snip"><h3>Which studio makes the most hits?</h3><p>A CTE counts films rated above 8 per production house, then RANK() picks the leader.</p><div class="code"><div class="highlight"><pre><span></span><span class="k">with</span><span class="w"> </span><span class="n">top_prod</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="k">select</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">production_company</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">movie_count</span><span class="p">,</span>
+<span class="w">         </span><span class="n">rank</span><span class="p">()</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="p">(</span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">desc</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">prod_company_rank</span>
+<span class="w">  </span><span class="k">from</span><span class="w"> </span><span class="n">movie</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">m</span>
+<span class="w">  </span><span class="k">left</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">ratings</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">movie_id</span>
+<span class="w">  </span><span class="k">where</span><span class="w"> </span><span class="n">avg_rating</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">production_company</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">null</span>
+<span class="w">  </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">production_company</span>
+<span class="p">)</span>
+<span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">top_prod</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">prod_company_rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div></div></div></div></section>
+<section id="summary"><div class="wrap"><p class="sec-id">Summary</p><h2>Executive summary</h2><ul class="inside"><li>Main findings</li><li>Recommendations for RSVP Movies</li></ul><p class="lead">Click any page to open it full size.</p><div class="slides"><figure><a href="img/p-1.jpg" target="_blank" rel="noopener"><img src="img/p-1.jpg" alt="Executive summary, page 1" loading="lazy"></a><figcaption>Page 1</figcaption></figure>
+</div></div></section>
+
+</main>
+<footer><div class="wrap"><span>© Nandini Soni</span><a href="../../index.html">Back to portfolio</a></div></footer>
+</body>
+</html>
