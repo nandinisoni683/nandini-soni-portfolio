@@ -1,6 +1,7 @@
 # IPL Performance Analysis
 
-**Type:** Data visualisation · **Tools:** Tableau · **Program:** upGrad Business Analyst
+**Type:** Data visualisation · **Tools:** Tableau  
+**Done at:** upGrad Business Analyst Program (NSDC) · 2024
 
 ## Problem
 Compare player and team performance across IPL seasons.

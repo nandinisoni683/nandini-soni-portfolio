@@ -1,6 +1,7 @@
 # Movies Data Analysis (Python)
 
-**Type:** Data cleaning and EDA · **Tools:** Python, Pandas, NumPy, Jupyter · **Program:** upGrad Business Analyst
+**Type:** Data cleaning and EDA · **Tools:** Python, Pandas, NumPy, Jupyter  
+**Done at:** upGrad Business Analyst Program (NSDC) · 2024
 
 ## Problem
 Analyse an IMDb movies dataset to find what makes movies successful with critics and audiences.
@@ -22,6 +23,8 @@ Analyse an IMDb movies dataset to find what makes movies successful with critics
 - **Leonardo DiCaprio** leads both the critic-favourite and audience-favourite lists among the actors compared.
 
 ## Files
+Original files in this folder:
+
 | File | What it is |
 |---|---|
 | [`movies_eda.ipynb`](movies_eda.ipynb) | Jupyter notebook with all code and outputs |

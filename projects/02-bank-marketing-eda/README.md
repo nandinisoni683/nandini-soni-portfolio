@@ -1,6 +1,7 @@
 # Bank Marketing Campaign Analysis
 
-**Type:** Exploratory data analysis · **Tools:** Advanced Excel (pivot tables, charts) · **Program:** upGrad Business Analyst
+**Type:** Exploratory data analysis · **Tools:** Advanced Excel (pivot tables, charts)  
+**Done at:** upGrad Business Analyst Program (NSDC) · Jul 2024
 
 ## Problem
 A bank ran a telemarketing campaign for **term deposits**. The goal was to identify which existing customers to target and the factors that drive a customer to open a term deposit.
@@ -24,10 +25,11 @@ A bank ran a telemarketing campaign for **term deposits**. The goal was to ident
 - **Cellular** is the dominant contact channel, and **May** is the peak campaign month.
 
 ## Files
+Original files in this folder:
+
 | File | What it is |
 |---|---|
-| `Bank_ marketing_presentation_BA_7494.pdf` | Final presentation with charts and insights |
-| `Analysis Report_BA 7494_Nandini Soni.xlsx` | Analysis workbook |
-| `Cleaned_dataset_BA Feb24 _7494_NANDINI SONI.xlsx` | Cleaned dataset |
-| `Univariate Analysis_BA 7494_Nandini_Soni_.xlsx` | Univariate analysis |
-| `Bivariate Analysis_BA 7494_Nandini Soni.xlsx` | Bivariate analysis |
+| [`bank-marketing-presentation.pdf`](bank-marketing-presentation.pdf) | Final presentation with charts and insights |
+| [`analysis-report.xlsx`](analysis-report.xlsx) | Analysis workbook with pivot tables and charts |
+| [`univariate-analysis.xlsx`](univariate-analysis.xlsx) | Univariate and segmented univariate analysis |
+| [`cleaned-dataset.xlsx`](cleaned-dataset.xlsx) | Cleaned dataset (45,000+ records) |
