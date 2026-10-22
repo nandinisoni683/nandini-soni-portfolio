@@ -174,4 +174,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .tables h3 { font-family: var(--mono); font-size: 0.9rem; margin: 0 0 0.3rem; color: var(--accent); }
 .tables p { margin: 0 0 0.4rem; font-size: 0.925rem; }
 .tables .cols { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); }
-@media (max-width: 860px) { .tables { grid-template-columns: minmax(0, 1fr); } }
+.mgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.mcard { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1rem 1.15rem; min-width: 0; }
+.mcard h3 { font-family: var(--display); font-size: 1rem; margin: 0 0 0.5rem; }
+.mcard ul { margin: 0; padding-left: 1.05rem; display: grid; gap: 0.35rem; font-size: 0.95rem; }
+.mcard code { font-family: var(--mono); font-size: 0.8rem; background: var(--accent-soft); color: var(--accent); padding: 0.05rem 0.35rem; border-radius: 4px; overflow-wrap: anywhere; }
+@media (max-width: 860px) { .tables, .mgrid { grid-template-columns: minmax(0, 1fr); } }
