@@ -97,7 +97,7 @@ p { margin: 0 0 1rem; }
 .org { color: var(--muted); font-size: 0.95rem; margin: 0.15rem 0 0.6rem; }
 .job ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
 .job .btn { margin-top: 0.9rem; }
-.ctx { color: var(--muted); font-size: 0.975rem; margin: 0 0 0.6rem; max-width: 44rem; }
+.ctx { color: var(--ink); font-size: 0.975rem; margin: 0 0 0.6rem; max-width: 44rem; }
 .job li strong { font-weight: 600; }
 .tag { font-family: var(--mono); font-size: 0.6875rem; padding: 0.15rem 0.5rem; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-left: 0.4rem; vertical-align: 0.2em; white-space: nowrap; font-weight: 500; }
 
@@ -113,6 +113,7 @@ p { margin: 0 0 1rem; }
   padding: 1.4rem; display: flex; flex-direction: column; gap: 0.9rem; min-width: 0;
 }
 .spec-top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.src { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); margin: -0.6rem 0 0; }
 .spec-tag { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
 .spec dl { margin: 0; display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0.35rem 0.75rem; font-size: 0.95rem; }
 .spec dt { font-family: var(--mono); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); padding-top: 0.25rem; }
@@ -252,7 +253,7 @@ footer { padding-block: 2rem 2.5rem; color: var(--muted); font-size: 0.9rem; }
                 <li>Ran a market basket analysis that found Pizza Dosa and American Chopsuey as the most-paired items, and proposed them as a combo meal.</li>
                 <li>Wrote the findings up as a report with assumptions, limitations and next steps, plus a CRISP-DM case study on restaurant analytics.</li>
               </ul>
-              <a class="btn" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/03-restaurant-best-selling-menu" target="_blank" rel="noopener">View internship work →</a>
+              <a class="btn" href="projects/03-restaurant-best-selling-menu/index.html">View internship work →</a>
             </div>
           </li>
           <li class="job">
@@ -301,66 +302,73 @@ footer { padding-block: 2rem 2.5rem; color: var(--muted); font-size: 0.9rem; }
       <div class="sec-id">Projects</div>
       <div>
         <h2>Data and analysis projects</h2>
-        <p class="intro">Each project opens a public, read-only page with the problem, approach, findings and original files.</p>
+        <p class="intro">Each project opens a public page with the write-up and the original files: reports, presentations, Excel workbooks, SQL and Python. Anyone can view or download them; only I can edit them.</p>
         <div class="specs">
           <article class="spec">
             <div class="spec-top"><h3>SaaS Sales Pipeline Conversion</h3><span class="spec-tag">Case study</span></div>
+            <p class="src">upGrad Business Analyst Program · Sep 2024</p>
             <dl>
               <dt>Problem</dt><dd>A SaaS startup&#8217;s pipeline conversion fell from 35% to 25%.</dd>
               <dt>Approach</dt><dd>Built an issue tree on the 5C framework with 18 ranked hypotheses, then analysed opportunity data to find which leads convert best.</dd>
               <dt>Result</dt><dd>Recommended prioritising ERP Implementation deals, the Enterprise Sellers channel, deals under 30K and existing customers, where conversion was highest.</dd>
             </dl>
             <div class="tools"><span class="chip">Issue tree</span><span class="chip">5C framework</span><span class="chip">Excel</span></div>
-            <a class="btn" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/01-saas-sales-pipeline-conversion" target="_blank" rel="noopener">View project →</a>
+            <a class="btn" href="projects/01-saas-sales-pipeline-conversion/index.html">View work →</a>
           </article>
           <article class="spec">
             <div class="spec-top"><h3>Bank Marketing Analysis</h3><span class="spec-tag">Excel EDA</span></div>
+            <p class="src">upGrad Business Analyst Program · Jul 2024</p>
             <dl>
               <dt>Problem</dt><dd>Find which bank customers to target for term deposits, and why they convert.</dd>
               <dt>Approach</dt><dd>Cleaned 45,000+ records, then ran univariate, segmented and bivariate analysis on age, job, balance, loans and contact channel.</dd>
               <dt>Result</dt><dd>Most customers are 30–50, married and in blue-collar or management jobs. Mobile is the main contact channel and May the peak month.</dd>
             </dl>
             <div class="tools"><span class="chip">Advanced Excel</span><span class="chip">Data cleaning</span><span class="chip">EDA</span></div>
-            <a class="btn" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/02-bank-marketing-eda" target="_blank" rel="noopener">View project →</a>
+            <a class="btn" href="projects/02-bank-marketing-eda/index.html">View work →</a>
           </article>
           <article class="spec">
             <div class="spec-top"><h3>Restaurant Best-Selling Menu</h3><span class="spec-tag">Tableau</span></div>
+            <p class="src">Mentormind internship · Sep–Oct 2024</p>
             <dl>
               <dt>Problem</dt><dd>Choose items for a best-selling menu and combo meals.</dd>
               <dt>Approach</dt><dd>Tableau views of top products, sales trend and order type, plus a market basket analysis that found the top combo.</dd>
               <dt>Result</dt><dd>Pizza Dosa and American Chopsuey were the most-paired items, so they became the recommended combo meal.</dd>
             </dl>
             <div class="tools"><span class="chip">Tableau</span><span class="chip">Basket analysis</span><span class="chip">Report</span></div>
-            <a class="btn" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/03-restaurant-best-selling-menu" target="_blank" rel="noopener">View project →</a>
+            <a class="btn" href="projects/03-restaurant-best-selling-menu/index.html">View work →</a>
           </article>
           <article class="spec">
             <div class="spec-top"><h3>RSVP Movies Case Study</h3><span class="spec-tag">SQL</span></div>
+            <p class="src">upGrad Business Analyst Program · Jul 2024</p>
             <dl>
               <dt>Problem</dt><dd>Recommend genre, director and cast for a production house&#8217;s next global film.</dd>
               <dt>Approach</dt><dd>Answered 24 business questions across 6 IMDb tables using joins, CTEs, window functions and CASE logic.</dd>
               <dt>Result</dt><dd>Drama leads in volume and Thriller ranks top 3. James Mangold stood out as a director, and Marvel Studios led production houses by votes.</dd>
             </dl>
             <div class="tools"><span class="chip">MySQL</span><span class="chip">CTEs</span><span class="chip">Window functions</span></div>
-            <a class="btn" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/04-sql-rsvp-imdb-movies" target="_blank" rel="noopener">View project →</a>
+            <a class="btn" href="projects/04-sql-rsvp-imdb-movies/index.html">View work →</a>
           </article>
           <article class="spec">
             <div class="spec-top"><h3>Movies Data Analysis</h3><span class="spec-tag">Python</span></div>
+            <p class="src">upGrad Business Analyst Program · 2024</p>
             <dl>
               <dt>Problem</dt><dd>Find what separates successful movies from the rest.</dd>
               <dt>Approach</dt><dd>Cleaned an IMDb dataset with Pandas, ranked profit, built an IMDb Top 250 and compared directors, genres and actors.</dd>
               <dt>Result</dt><dd>Family + Sci-Fi is the most popular genre pair, and James Cameron has two films in the top 10 by profit.</dd>
             </dl>
             <div class="tools"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">EDA</span></div>
-            <a class="btn" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/05-python-movies-eda" target="_blank" rel="noopener">View notebook →</a>
+            <a class="btn" href="projects/05-python-movies-eda/index.html">View work →</a>
           </article>
           <article class="spec">
             <div class="spec-top"><h3>IPL Performance Analysis</h3><span class="spec-tag">Tableau</span></div>
+            <p class="src">upGrad Business Analyst Program · 2024</p>
             <dl>
               <dt>Problem</dt><dd>Compare player and team performance across IPL seasons.</dd>
-              <dt>Approach</dt><dd>Cleaned the match data and built interactive Tableau views by player, team and season.</dd>
+              <dt>Approach</dt><dd>Joined match and ball-by-ball data, built calculated fields for toss impact, win/loss and home vs. away, and combined 10 charts into 3 dashboards.</dd>
+              <dt>Result</dt><dd>Toss winners who chose to field won 196 matches vs. 124 when batting. Raina and Kohli top the run charts; Malinga leads wickets.</dd>
             </dl>
             <div class="tools"><span class="chip">Tableau</span><span class="chip">Data cleaning</span></div>
-            <a class="btn" href="https://github.com/nandinisoni683/nandini-soni-portfolio/tree/main/projects/06-ipl-tableau-dashboard" target="_blank" rel="noopener">View project →</a>
+            <a class="btn" href="projects/06-ipl-tableau-dashboard/index.html">View work →</a>
           </article>
         </div>
       </div>

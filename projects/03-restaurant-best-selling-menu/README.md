@@ -1,6 +1,7 @@
 # Restaurant Best-Selling Menu Analysis
 
-**Type:** Mentor-led data analyst internship · **Tools:** Tableau, Excel · **With:** The Thickshake Factory & Mentormind (Sep–Oct 2024)
+**Type:** Mentor-led data analyst internship · **Tools:** Tableau, Excel  
+**Done at:** Data Analyst internship, Mentormind × The Thickshake Factory · Sep–Oct 2024
 
 ## Problem
 Help a restaurant improve its menu and grow sales by answering four questions:
@@ -30,10 +31,13 @@ Help a restaurant improve its menu and grow sales by answering four questions:
 A presentation applying the **CRISP-DM** framework to McDonald's. It covers business problems such as drive-thru wait times, menu profitability and supply chain, and proposes data-driven solutions for each.
 
 ## Files
+Original files in this folder:
+
 | File | What it is |
 |---|---|
-| `Restaurant's Best-Selling Menu.twb` | Tableau workbook (open in Tableau Desktop or Tableau Public) |
-| `Report on Restaurant Performance Analysis.pdf` | Written report with insights and recommendations |
-| `Restaurant Performance Analysis.pdf` | Presentation |
-| `Restaurant_Dataset (1).xlsx` | Dataset |
-| `Innovative Strategies for Growth and Satisfaction.pdf` | CRISP-DM case study presentation |
+| [`restaurant-best-selling-menu.twb`](restaurant-best-selling-menu.twb) | Tableau workbook (open in Tableau Desktop or Tableau Public) |
+| [`restaurant-performance-report.pdf`](restaurant-performance-report.pdf) | Written report: insights, recommendations, assumptions, limitations |
+| [`restaurant-performance-presentation.pdf`](restaurant-performance-presentation.pdf) | Presentation (PDF) |
+| [`restaurant-performance-presentation.pptx`](restaurant-performance-presentation.pptx) | Presentation (PowerPoint) |
+| [`crisp-dm-restaurant-case-study.pdf`](crisp-dm-restaurant-case-study.pdf) | CRISP-DM case study on restaurant analytics (PDF) |
+| [`crisp-dm-restaurant-case-study.pptx`](crisp-dm-restaurant-case-study.pptx) | CRISP-DM case study (PowerPoint) |

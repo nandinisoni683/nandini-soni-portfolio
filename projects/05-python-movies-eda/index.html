@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Movies Data Analysis · Nandini Soni</title>
+<meta name="description" content="Find what makes movies successful with critics and audiences, using an IMDb dataset of 5,000+ films.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="back" href="../../index.html">← Nandini Soni · Portfolio</a>
+  <div class="profiles"><a class="btn primary" href="https://www.linkedin.com/in/soni-nandini" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/nandinisoni683" target="_blank" rel="noopener">GitHub</a></div>
+</div></div>
+<header><div class="wrap">
+  <p class="eyebrow">Project</p>
+  <h1>Movies Data Analysis</h1>
+  <p class="meta"><span><b>Done at:</b> upGrad Business Analyst Program (NSDC) · 2024</span><span><b>Tools:</b> Python, Pandas, NumPy, Jupyter</span></p>
+  <dl class="summary">
+    <dt>Problem</dt><dd>Find what makes movies successful with critics and audiences, using an IMDb dataset of 5,000+ films.</dd>
+    <dt>Result</dt><dd><b>Family + Sci-Fi</b> earns the most on average, <b>James Cameron</b> has two films in the top 10 by profit, and <b>Leonardo DiCaprio</b> leads both the critic and audience lists among the actors compared.</dd>
+  </dl>
+  <div class="jump"><a class="btn" href="#steps">Steps</a><a class="btn" href="#methods">Methods</a><a class="btn" href="#code">Code</a></div>
+</div></header>
+<main>
+<section id="steps"><div class="wrap"><p class="sec-id">How I did it</p><h2>Step by step</h2><ol class="steps"><li><span><b>Loaded and inspected the data:</b> 5,043 films and 28 columns.</span></li><li><span><b>Cleaned it.</b>Dropped unneeded columns and mostly-empty rows, filled missing languages, and removed duplicates. About 77% of rows remained.</span></li><li><span><b>Found the most profitable films</b>by subtracting budget from gross.</span></li><li><span><b>Built an IMDb Top 250</b>of films with more than 25,000 votes.</span></li><li><span><b>Compared directors, genres and actors</b>to see who and what scores and earns best.</span></li></ol></div></section>
+<section id="methods"><div class="wrap"><p class="sec-id">Formulas and methods</p><h2>What I used</h2><div class="mgrid"><div class="mcard"><h3>Libraries</h3><ul><li><b>pandas</b> for data frames, <b>NumPy</b> for numeric work, in a <b>Jupyter</b> notebook</li></ul></div><div class="mcard"><h3>Cleaning</h3><ul><li><code>read_csv()</code> to load, <code>isnull().sum()</code> to count missing values</li><li><code>round(100 * nulls / rows, 2)</code> for the % missing per column</li><li><code>drop()</code> for unneeded columns, row filter <code>isnull().sum(axis=1) &lt;= 5</code></li><li><code>loc[]</code> to fill missing language with English, <code>drop_duplicates()</code></li></ul></div><div class="mcard"><h3>Analysis</h3><ul><li><code>profit = gross - budget</code>, then <code>sort_values()</code> for the top 10</li><li>Top 250: sort by imdb_score, filter <code>num_voted_users &gt; 25000</code>, add a Rank column</li><li><code>pivot_table(values='imdb_score', index='director_name', aggfunc='mean')</code> for the top 10 directors</li><li><code>str.split('|')</code> with <code>apply(lambda …)</code> to split genres, then <code>groupby()</code> + <code>mean()</code> for genre pairs</li><li><code>concat()</code> to combine three actors&#8217; films and compare their scores</li></ul></div></div></div></section>
+<section id="code"><div class="wrap"><p class="sec-id">Python</p><h2>Key steps in code</h2><p class="lead">A short sample from the notebook.</p><div class="snips"><div class="snip"><h3>Cleaning</h3><p>Measured how much data was missing, then removed rows that were mostly empty.</p><div class="code"><div class="highlight"><pre><span></span><span class="c1"># share of missing values in each column</span>
+<span class="nb">round</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="p">(</span><span class="n">movies</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="o">.</span><span class="n">index</span><span class="p">)),</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># drop rows with more than five missing values</span>
+<span class="n">movies</span> <span class="o">=</span> <span class="n">movies</span><span class="p">[</span><span class="n">movies</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div></div><div class="snip"><h3>Most profitable films</h3><p>Added a profit column and sorted to get the top 10.</p><div class="code"><div class="highlight"><pre><span></span><span class="n">movies</span><span class="p">[</span><span class="s1">'profit'</span><span class="p">]</span> <span class="o">=</span> <span class="n">movies</span><span class="p">[</span><span class="s1">'gross'</span><span class="p">]</span> <span class="o">-</span> <span class="n">movies</span><span class="p">[</span><span class="s1">'budget'</span><span class="p">]</span>
+<span class="n">top10</span> <span class="o">=</span> <span class="n">movies</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'profit'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div></div><div class="snip"><h3>Most popular genre pairs</h3><p>Split each film&#8217;s genres and averaged box-office takings for each pair.</p><div class="code"><div class="highlight"><pre><span></span><span class="n">movies</span><span class="p">[</span><span class="s1">'genres'</span><span class="p">]</span> <span class="o">=</span> <span class="n">movies</span><span class="p">[</span><span class="s1">'genres'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'|'</span><span class="p">)</span>
+<span class="n">movies</span><span class="p">[</span><span class="s1">'genre_1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">movies</span><span class="p">[</span><span class="s1">'genres'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">movies</span><span class="p">[</span><span class="s1">'genre_2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">movies</span><span class="p">[</span><span class="s1">'genres'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">PopGenre</span> <span class="o">=</span> <span class="n">movies</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'genre_1'</span><span class="p">,</span> <span class="s1">'genre_2'</span><span class="p">])[</span><span class="s1">'gross'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div></div><div class="table-wrap"><table class="data"><thead><tr><th>Genre 1</th><th>Genre 2</th><th>Average gross ($M)</th></tr></thead><tbody><tr><td>Family</td><td>Sci-Fi</td><td>434.9</td></tr><tr><td>Adventure</td><td>Sci-Fi</td><td>228.6</td></tr><tr><td>Adventure</td><td>Family</td><td>118.9</td></tr><tr><td>Adventure</td><td>Animation</td><td>117.0</td></tr><tr><td>Action</td><td>Adventure</td><td>109.6</td></tr></tbody></table></div><p class="caption">Top 5 genre pairs by average gross, from the notebook output.</p></div></div></section>
+
+</main>
+<footer><div class="wrap"><span>© Nandini Soni</span><a href="../../index.html">Back to portfolio</a></div></footer>
+</body>
+</html>
