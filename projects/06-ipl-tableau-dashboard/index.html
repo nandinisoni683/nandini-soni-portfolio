@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IPL Performance Analysis · Nandini Soni</title>
+<meta name="description" content="Turn ball-by-ball and match data from the Indian Premier League into dashboards that show what wins matches, and who the standout teams and players are.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="back" href="../../index.html">← Nandini Soni · Portfolio</a>
+  <div class="profiles"><a class="btn primary" href="https://www.linkedin.com/in/soni-nandini" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/nandinisoni683" target="_blank" rel="noopener">GitHub</a></div>
+</div></div>
+<header><div class="wrap">
+  <p class="eyebrow">Project</p>
+  <h1>IPL Performance Analysis</h1>
+  <p class="meta"><span><b>Done at:</b> upGrad Business Analyst Program (NSDC) · 2024</span><span><b>Tools:</b> Tableau</span></p>
+  <dl class="summary">
+    <dt>Problem</dt><dd>Turn ball-by-ball and match data from the Indian Premier League into dashboards that show what wins matches, and who the standout teams and players are.</dd>
+    <dt>Result</dt><dd>Teams that won the toss and chose to <b>field</b> won <b>196</b> matches, against 124 when they chose to bat. <b>Mumbai Indians</b> hold the biggest win by runs (146) and <b>Chennai Super Kings</b> by wickets (10). <b>SK Raina</b> (4,548) and <b>V Kohli</b> (4,423) top the run charts, and <b>SL Malinga</b> leads the wicket-takers.</dd>
+  </dl>
+  <div class="jump"><a class="btn" href="#steps">Steps</a><a class="btn" href="#methods">Methods</a><a class="btn" href="#dashboards">Dashboards</a><a class="btn" href="#sheets">Charts</a></div>
+</div></header>
+<main>
+<section id="steps"><div class="wrap"><p class="sec-id">How I did it</p><h2>Step by step</h2><ol class="steps"><li><span><b>Connected the data.</b>Linked the match table and the ball-by-ball table in Tableau so every delivery knows its match, season and venue.</span></li><li><span><b>Created new fields.</b>Built calculated fields such as whether the toss winner also won the match, win vs. loss per season and home vs. away win %.</span></li><li><span><b>Built one sheet per question.</b>Toss impact, biggest wins, highest totals, top batsmen, top bowlers, season results and home vs. away.</span></li><li><span><b>Filtered to what matters.</b>Used Top 10 filters, a season (year) context filter and excluded run-outs from bowler wickets.</span></li><li><span><b>Combined them into dashboards.</b>Grouped the sheets into Match, Player and Team dashboards, with clicks on one chart filtering the others.</span></li></ol></div></section>
+<section id="methods"><div class="wrap"><p class="sec-id">Formulas and methods</p><h2>What I used</h2><div class="mgrid"><div class="mcard"><h3>Data preparation</h3><ul><li>Joined the <b>matches</b> table to the <b>ball-by-ball</b> table on match ID</li><li>Combined match ID and innings into one key for team totals per innings</li></ul></div><div class="mcard"><h3>Calculated fields</h3><ul><li><code>Toss vs. Match Outcome</code>: did the toss winner also win the match?</li><li><code>Win vs. Loss</code>: +1 for a win and −1 for a loss, summed per team per season</li><li><code>Win %</code> = matches won ÷ matches played, split by <code>Home vs. Away</code></li></ul></div><div class="mcard"><h3>Filters</h3><ul><li><b>Top N</b> filters to keep the top 10 batsmen, bowlers and teams</li><li><b>Context filter</b> on season year so Top N respects the selected season</li><li>Dismissal kind filter that excludes run outs, retired hurt and obstructing the field from bowler wickets</li></ul></div><div class="mcard"><h3>Charts and dashboards</h3><ul><li>Bar charts, treemaps, packed bubbles, a diverging win/loss bar and a dot plot</li><li>Three dashboards with <b>action filters</b>, so clicking one chart filters the rest</li></ul></div></div></div></section>
+<section id="dashboards"><div class="wrap"><p class="sec-id">Dashboards</p><h2>The three dashboards</h2><ul class="inside"><li><b>Match Statistics:</b> toss impact, biggest wins and highest totals</li><li><b>Player Statistics:</b> top run-scorers, big hitters and wicket-takers</li><li><b>Team Statistics:</b> season-wise results and home vs. away win %</li></ul><div class="slides"><figure><a href="img/dash/p-1.jpg" target="_blank" rel="noopener"><img src="img/dash/p-1.jpg" alt="The three dashboards, slide 1" loading="lazy"></a><figcaption>Match Statistics dashboard</figcaption></figure>
+<figure><a href="img/dash/p-2.jpg" target="_blank" rel="noopener"><img src="img/dash/p-2.jpg" alt="The three dashboards, slide 2" loading="lazy"></a><figcaption>Player Statistics dashboard</figcaption></figure>
+<figure><a href="img/dash/p-3.jpg" target="_blank" rel="noopener"><img src="img/dash/p-3.jpg" alt="The three dashboards, slide 3" loading="lazy"></a><figcaption>Team Statistics dashboard</figcaption></figure>
+</div></div></section>
+<section id="sheets"><div class="wrap"><p class="sec-id">Charts</p><h2>Each chart on its own</h2><ul class="inside"><li>The individual charts that make up the dashboards</li></ul><div class="slides"><figure><a href="img/sheets/p-01.jpg" target="_blank" rel="noopener"><img src="img/sheets/p-01.jpg" alt="Each chart on its own, slide 1" loading="lazy"></a><figcaption>Toss vs. match outcome</figcaption></figure>
+<figure><a href="img/sheets/p-03.jpg" target="_blank" rel="noopener"><img src="img/sheets/p-03.jpg" alt="Each chart on its own, slide 2" loading="lazy"></a><figcaption>Biggest win by runs</figcaption></figure>
+<figure><a href="img/sheets/p-04.jpg" target="_blank" rel="noopener"><img src="img/sheets/p-04.jpg" alt="Each chart on its own, slide 3" loading="lazy"></a><figcaption>Biggest win by wickets</figcaption></figure>
+<figure><a href="img/sheets/p-05.jpg" target="_blank" rel="noopener"><img src="img/sheets/p-05.jpg" alt="Each chart on its own, slide 4" loading="lazy"></a><figcaption>Highest team totals</figcaption></figure>
+<figure><a href="img/sheets/p-07.jpg" target="_blank" rel="noopener"><img src="img/sheets/p-07.jpg" alt="Each chart on its own, slide 5" loading="lazy"></a><figcaption>Highest runs by batsman</figcaption></figure>
+<figure><a href="img/sheets/p-09.jpg" target="_blank" rel="noopener"><img src="img/sheets/p-09.jpg" alt="Each chart on its own, slide 6" loading="lazy"></a><figcaption>Highest wickets by bowler</figcaption></figure>
+<figure><a href="img/sheets/p-11.jpg" target="_blank" rel="noopener"><img src="img/sheets/p-11.jpg" alt="Each chart on its own, slide 7" loading="lazy"></a><figcaption>Most hits by batsman</figcaption></figure>
+<figure><a href="img/sheets/p-14.jpg" target="_blank" rel="noopener"><img src="img/sheets/p-14.jpg" alt="Each chart on its own, slide 8" loading="lazy"></a><figcaption>Season-wise team performance</figcaption></figure>
+<figure><a href="img/sheets/p-15.jpg" target="_blank" rel="noopener"><img src="img/sheets/p-15.jpg" alt="Each chart on its own, slide 9" loading="lazy"></a><figcaption>Season-wise team performance (2014–2015)</figcaption></figure>
+<figure><a href="img/sheets/p-16.jpg" target="_blank" rel="noopener"><img src="img/sheets/p-16.jpg" alt="Each chart on its own, slide 10" loading="lazy"></a><figcaption>Win % home vs. away</figcaption></figure>
+</div></div></section>
+
+</main>
+<footer><div class="wrap"><span>© Nandini Soni</span><a href="../../index.html">Back to portfolio</a></div></footer>
+</body>
+</html>
