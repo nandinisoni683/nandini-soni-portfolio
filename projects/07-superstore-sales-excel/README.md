@@ -1,6 +1,7 @@
 # Superstore Sales Analysis
 
-**Type:** Sales analysis · **Tools:** Advanced Excel (pivot tables, lookups, charts) · **Program:** upGrad Business Analyst
+**Type:** Sales analysis · **Tools:** Advanced Excel (pivot tables, lookups, charts)  
+**Done at:** upGrad Business Analyst Program (NSDC) · 2024
 
 ## Problem
 Explain how a retail chain's sales and profit changed over several years, and by region and customer.
