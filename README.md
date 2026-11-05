@@ -1,11 +1,11 @@
-# Nandini Soni: Business & Data Analyst Portfolio
+# Nandini Soni: MIS Reporting & Data Analysis Portfolio
 
 📧 nandinisoni681@gmail.com · [LinkedIn](https://www.linkedin.com/in/soni-nandini) · 🌐 [Portfolio website](https://nandinisoni683.github.io/nandini-soni-portfolio/) · Indore, India
 
 ## About me
-I'm a Business Analyst with 1+ year of experience gathering and documenting requirements for AI-enabled applications and workflow automation, working in Agile/Scrum teams. I write BRDs, user stories and acceptance criteria, validate builds through UAT, and use SQL, Power BI, Tableau and Python to support data-driven decisions.
+I'm a Business Analyst with 1 year of experience at Ratovate Technologies, where I maintained project trackers, status reports and documentation across 5 projects. I work mainly in Advanced Excel (pivot tables, lookups, charts) and Tableau, and I'm building my SQL skills through the hands-on projects below. I care about accurate data, consistent reporting and on-time delivery.
 
-**Open to Business Analyst and Data Analyst roles, in Indore or remote.**
+**Looking for MIS / Reporting Analyst and Junior Data Analyst roles.**
 
 ## Projects
 | # | Project | What I did | Tools |
@@ -21,10 +21,10 @@ I'm a Business Analyst with 1+ year of experience gathering and documenting requ
 ## Skills
 | Category | Skills |
 |---|---|
-| Business analysis | Requirements gathering, BRD/FRD, user stories, use cases, acceptance criteria, process flow mapping, gap analysis, wireframing, UAT, Agile/Scrum, stakeholder management |
-| AI & automation | Agentic and generative AI, prompt engineering, knowledge bases/RAG, AI agent requirements and testing; Dify, n8n, Voiceflow, OpenAI and Gemini APIs |
-| Data & BI | SQL, Power BI, Tableau, Python (Pandas), Jupyter, Advanced Excel (pivot tables, VLOOKUP, XLOOKUP, INDEX-MATCH), EDA, KPI dashboards |
-| Tools | Jira, ClickUp, Basecamp, Google Workspace, Microsoft Office |
+| Reporting & Excel | Advanced Excel (pivot tables, VLOOKUP, XLOOKUP, INDEX-MATCH, formulas, charts), MIS reports, trackers, Google Sheets |
+| Data & visualisation | Tableau dashboards, SQL (joins, filtering, aggregations), Power BI (basic), Python / Pandas (basic), data cleaning |
+| Business analysis | Requirements documentation, BRDs, user stories, process flow mapping, gap analysis, Agile/Scrum |
+| Tools | Microsoft Office, Google Workspace, Jira, ClickUp, WordPress |
 
 ## Certifications
 See [certifications.md](certifications.md) for the full list with verification links.
