@@ -4,7 +4,7 @@ Newest first. None of these certificates expire. Each link opens the issuer's of
 
 | # | Certification | Issued by | Issued | Verify |
 |---|---|---|---|---|
-| 1 | Professional Certification Program in Business Analytics (6 months) | upGrad | Dec 2024 | [Verify](https://upgradcampus.certificate.givemycertificate.com/c/4a341fc0-b557-46aa-857e-411c04adfc50) |
+| 1 | Professional Certification Program in Business Analytics (6-month online program) | upGrad | Dec 2024 | [Verify](https://upgradcampus.certificate.givemycertificate.com/c/4a341fc0-b557-46aa-857e-411c04adfc50) |
 | 2 | Business Analytics Course (NSDC, Skill India) | upGrad × NSDC | Nov 2024 | [View certificate](certificates/upgrad-business-analyst-nsdc.pdf) |
 | 3 | Business Analyst Traineeship (with Letter of Recommendation and Letter of Appreciation) | MedTourEasy | Jun 2023 | [View certificate](certificates/medtoureasy-traineeship.pdf) |
 | 4 | Getting Started with Power BI Desktop | Coursera | Jun 2023 | [Verify](https://coursera.org/verify/BYRU4TRDWRMB) |
