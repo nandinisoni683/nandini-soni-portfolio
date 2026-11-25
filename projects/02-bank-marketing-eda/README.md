@@ -1,7 +1,7 @@
 # Bank Marketing Campaign Analysis
 
 **Type:** Exploratory data analysis · **Tools:** Advanced Excel (pivot tables, charts)  
-**Done at:** upGrad Business Analyst Program (NSDC) · Jul 2024
+**Done at:** upGrad Professional Certification Program in Business Analytics · Jul 2024
 
 ## Problem
 A bank ran a telemarketing campaign for **term deposits**. The goal was to identify which existing customers to target and the factors that drive a customer to open a term deposit.

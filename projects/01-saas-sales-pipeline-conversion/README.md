@@ -1,7 +1,7 @@
 # Sales Pipeline Conversion at a SaaS Startup
 
 **Type:** Business analysis case study · **Tools:** Excel, PowerPoint  
-**Done at:** upGrad Business Analyst Program (NSDC) · Sep 2024
+**Done at:** upGrad Professional Certification Program in Business Analytics · Sep 2024
 
 ## Problem
 TechnoServe, a tech SaaS startup, saw its sales pipeline conversion fall from **35% (end of FY 2017-18) to 25%**. The task was to understand the problem, form hypotheses for the drop, and analyse the opportunity data to recommend how to raise conversion.
