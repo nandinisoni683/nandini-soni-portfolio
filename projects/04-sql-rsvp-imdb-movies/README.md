@@ -1,7 +1,7 @@
 # RSVP Movies: IMDb SQL Case Study
 
 **Type:** SQL analysis · **Tools:** MySQL  
-**Done at:** upGrad Business Analyst Program (NSDC) · Jul 2024
+**Done at:** upGrad Professional Certification Program in Business Analytics · Jul 2024
 
 ## Problem
 RSVP Movies, an Indian production house, plans to make a film for a global audience. Using an IMDb database (tables: movie, genre, ratings, names, director_mapping, role_mapping), recommend the genre, directors, actors and production partners for the next project.

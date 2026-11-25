@@ -1,7 +1,7 @@
 # Movies Data Analysis (Python)
 
 **Type:** Data cleaning and EDA · **Tools:** Python, Pandas, NumPy, Jupyter  
-**Done at:** upGrad Business Analyst Program (NSDC) · 2024
+**Done at:** upGrad Professional Certification Program in Business Analytics · 2024
 
 ## Problem
 Analyse an IMDb movies dataset to find what makes movies successful with critics and audiences.
